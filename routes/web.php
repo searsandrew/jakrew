@@ -14,7 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    
     return view('welcome');
+});
+
+Route::get('browse', 'BrowseController@index');
+
+Route::get('item/{item}', function ($item) {
+    
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
